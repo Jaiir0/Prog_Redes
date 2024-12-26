@@ -1,6 +1,6 @@
 
 def encode():
-    fd = open('pedepano.jpeg','rb')
+    fd = open('IMAGEMDESEJADA.jpeg','rb')
     dados = fd.read()
     print(dados)
     pos = 0
@@ -36,7 +36,7 @@ def encode():
 import struct
 
 def decode():
-    with open('arquivoencode','r') as arq:
+    with open('ARQUIVO_ENCODE','r') as arq:
         fdin = arq.read()
         
     pos = 0
@@ -57,7 +57,7 @@ def decode():
         
     listabytes = bytes(listabytes) #conerte os inteiros para bytes(nao usei bytearray porque ficava aparecendo 'bitearray()' no print)    
     
-    with open('arquviodecode','w')as arqD:
+    with open('ARQUIVO_DECODE','w')as arqD:
         arqD.write(str(listabytes))
     
 decode()
