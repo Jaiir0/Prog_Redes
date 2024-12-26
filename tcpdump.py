@@ -2,7 +2,7 @@ import struct
 from datetime import datetime
 
 try:
-    filename = input('Digite o nome do arquvio tcpdump que deseja analisar: ')
+    filename = input('Digite o nome do arquvio tcpdump que deseja analisar: ') #coloque no mesmo diretorio do código
     fd = open (filename, "rb")
 except FileNotFoundError:
     print('Arquivo não encontrado. ')
